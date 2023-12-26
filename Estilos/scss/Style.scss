@@ -1,0 +1,54 @@
+
+@import "base/tipografia";
+@import "base/reset";
+@import "layout/header";
+@import "layout/navbar";
+@import "componentes/boton";
+
+
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+.album {
+  height: 80px;
+  margin: 10%;
+}
+
+.contactar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#pie {
+  grid-area: footer;
+  font-size: medium;
+  background-color: #d8d6da;
+  background-image: url(../img/LY.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: #e7e7e7 100px;
+  margin: 0%;
+}
+
+
+@media screen and (max-width: 480px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "main"
+      "footer";
+
+    grid-template-columns: auto;
+    grid-template-rows: 200px 150px 150fr 150px;
+  }
+}
